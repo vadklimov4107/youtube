@@ -1,17 +1,15 @@
 import type { Metadata } from 'next';
 import { Noto_Sans } from 'next/font/google';
 
-import './globals.scss';
 import { Layout } from '@/components/layout/Layout';
 
-const notoSans = Noto_Sans({
-  variable: "--font-noto-sans",
-  subsets: ["latin"],
-});
+import './globals.scss';
+
+const notoSans = Noto_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Youtube",
-  description: "Best video hosting platform",
+  title: 'Youtube',
+  description: 'Best video hosting platform',
 }
 
 export default function RootLayout({
@@ -21,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={notoSans.variable}>
+      <body className={notoSans.className}>
         <Layout>{children}</Layout>
       </body>
     </html>
